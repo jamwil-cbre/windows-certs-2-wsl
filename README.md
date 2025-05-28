@@ -15,12 +15,8 @@ this project and navigating to that directory to run the script with:
 .\get-all-certs.ps1
 ```
 
-Within WSL, create a symlink from the created folder to `/etc/ssl/certs`
-and import its content.
-```
-  sudo mv /etc/ssl/certs /etc/ssl/certs.orig
-  sudo ln -s /mnt/<path to the "all-certificates" folder> /etc/ssl/certs
-  update-ca-certificates ## debian & ubuntu; centos, etc requires something else
-```
+Copy the crt files into `usr/local/share/ca-certificates` and
+`update-ca-certificates`: 
+https://documentation.ubuntu.com/server/how-to/security/install-a-root-ca-certificate-in-the-trust-store/index.html
 
 Enjoy :)
