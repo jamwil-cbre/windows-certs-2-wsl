@@ -1,7 +1,7 @@
 #
 
 $StoreToDir = "all-certificates"
-$CertExtension = "pem" # use "crt" for usage on windows systems
+$CertExtension = "crt"
 $InsertLineBreaks=1
 
 If (Test-Path $StoreToDir) {
